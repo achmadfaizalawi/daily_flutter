@@ -1,4 +1,4 @@
-# DAY 01: Stopwatch Application
+# DAY 02 : Contact Application
 
 100 Days Challenge Flutter.
 
