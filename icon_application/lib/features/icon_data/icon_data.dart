@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+class DataIcon{
+  List icon = const [
+    Icon(Icons.access_time),
+    Icon(Icons.timer),
+    Icon(Icons.home),
+    Icon(Icons.accessible),
+    Icon(Icons.accessible_forward),
+    Icon(Icons.add_circle_outlined),
+    Icon(Icons.add_box),
+    Icon(Icons.add_home),
+    Icon(Icons.add_to_photos),
+    Icon(Icons.home_work_rounded),
+    Icon(Icons.tiktok),
+    Icon(Icons.face),
+    Icon(Icons.zoom_out),
+    Icon(Icons.spatial_audio),
+    Icon(Icons.ad_units),
+    Icon(Icons.account_circle_sharp),
+    Icon(Icons.swap_calls),
+    Icon(Icons.settings_bluetooth),
+    Icon(Icons.room_rounded),
+    Icon(Icons.six_k),
+    Icon(Icons.account_balance),
+    Icon(Icons.sos),
+    Icon(Icons.sports_hockey),
+    Icon(Icons.space_dashboard),
+    Icon(Icons.sports_volleyball),
+    Icon(Icons.account_tree_sharp),
+    Icon(Icons.add_a_photo),
+    Icon(Icons.add_ic_call),
+    Icon(Icons.no_meals_ouline),
+  ];
+}
