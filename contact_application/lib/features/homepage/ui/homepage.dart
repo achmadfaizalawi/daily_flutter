@@ -14,37 +14,48 @@ class MyHomePage extends StatelessWidget {
           title: const Text("Contact Application"),
           centerTitle: true,
         ),
-        body: Container(
-          margin: const EdgeInsets.all(2),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ListView.builder(
-                itemCount: contact.getUsernameContactData().length,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.blue,
-                      maxRadius: 25,
-                      child: Text(contact.getUsernameContactData()[index][0].toString().toUpperCase(), 
+        body: Container(         
+          padding: const EdgeInsets.all(10),
+          child: ListView.builder(
+            itemCount: contact.data.length,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: const EdgeInsets.all(4),
+                child: SizedBox(
+                  height: 80,
+                  width: 50,
+                  child: ElevatedButton(    
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.only(left: 5),
+                      backgroundColor: Colors.blue[100],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),           
+                    ),
+                    onPressed: (){},
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.blue,
+                        maxRadius: 25,
+                        child: Text(contact.getUsernameContactData()[index][0].toString().toUpperCase(), 
+                        style: const TextStyle(
+                          fontSize: 20,
+                          color: Colors.white),
+                        ),
+                      ),
+                      title: Text(contact.getUsernameContactData()[index],
                       style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.white),
+                        fontSize: 18),
+                      ),
+                      subtitle: Text(contact.getPhoneContactData()[index],
+                      style: const TextStyle(
+                        fontSize: 16),
                       ),
                     ),
-                    title: Text(contact.getUsernameContactData()[index],
-                    style: const TextStyle(
-                      fontSize: 18),
-                    ),
-                    subtitle: Text(contact.getPhoneContactData()[index],
-                    style: const TextStyle(
-                      fontSize: 15),
-                    ),
-                  );
-                })
-            ],
-          ),
+                  ),
+                ),
+              );
+            }),
         ) 
         )
     );
